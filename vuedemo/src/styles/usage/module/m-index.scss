@@ -1,0 +1,60 @@
+@charset 'utf-8';
+@import './common';
+.m-index{
+	@include flexbox();
+	@include flex-direction(column);
+	height:100%;
+	>*{
+		width: 100%;
+	}
+	header{
+		height: .44rem;
+		background: green;
+		ul{
+			@include flexbox();
+			height:100%;
+			li:first-child,
+			li:last-child{
+				width:.44rem;
+				height:100%;
+				text-align: center;
+				line-height: .44rem;
+				font-size:.20rem;
+				color: #fff;
+			}
+			li:nth-child(2){
+				@include flex();
+				text-align:center;
+				color:#fff;
+				line-height:.44rem;
+				span{
+					
+				}
+			}
+		}
+	}
+	nav{
+		ul{
+			li{
+				float: left;
+				width:33.3%;
+				text-align:center;
+				line-height:.33rem;
+
+			}
+			li.active{
+				color:red;
+				border-bottom: 1px solid red; 
+			}
+		}
+	}
+	section{
+		background:yellow;
+		@include flex();
+		width:100%
+	}
+	footer{
+		height:.44rem;
+		background:blue;
+	}
+}
